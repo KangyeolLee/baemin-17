@@ -29,3 +29,7 @@
 이건 제 깃허브 [링크](https://github.com/TsooranKim)인데 아직은 볼게 없답니다 ㅠㅠ 제가 사람들이랑 [코딩게임](https://www.codingame.com/profile/8724b64d0b8e8c1a0edb614d958f23927661771)하는 걸 매우 좋아합니다. 방 만들어서 같이 코딩문제 푸는 게임이에요! 나중에 같이 하면 좋겠어요 ㅎㅎㅎ
 
 깃헙, 깃, 맥, 맥 터미널, VS Code 등의 꿀팁은 저도 아직 아는게 많이 없어서 앞으로 많이 공유해보겠습니다!
+
+## 팁 소개
+
+1. [VSCode 관련](tips/VSCODETIP.md)
