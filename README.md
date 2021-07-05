@@ -33,3 +33,4 @@
 ## 팁 소개
 
 1. [VSCode 관련](tips/VSCODETIP.md)
+2. [맥 마우스 관련](tips/MACTIP.md)
