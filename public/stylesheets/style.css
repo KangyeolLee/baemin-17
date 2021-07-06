@@ -1,8 +1,22 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #ededed;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
+}
+
+#root {
+  width: 400px;
+  height: 800px;
+  border: 1px solid #111;
+  border-radius: 10px;
+  background-color: #fff;
 }
