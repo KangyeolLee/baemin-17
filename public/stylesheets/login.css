@@ -1,0 +1,76 @@
+#login-field {
+  position: relative;
+  flex: 1;
+}
+
+#login-field .input-wrapper {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#login-field .input-wrapper input {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  padding: 1rem 0;
+  border-bottom: 1px solid #d7d7d7;
+}
+#login-field .input-wrapper input::placeholder {
+  color: #d7d7d7;
+  font-size: 1.05rem;
+}
+
+#login-field .button {
+  position: static;
+  margin-top: 2rem;
+}
+
+#about-account {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  color: #ededed;
+}
+#about-account a {
+  color: #a7a7a7;
+  text-decoration: none;
+}
+#about-account a:hover {
+  opacity: 0.75;
+}
+
+#social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#social-login .social-login-btn {
+  border: 1px solid #888;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+#social-login .social-login-btn:hover {
+  background-color: #ededed;
+}
+
+#social-login .social-login-btn .logo-img {
+  width: 1rem;
+  height: 1rem;
+}
+
+#social-login .guide-message {
+  text-align: center;
+  color: #999;
+}
+#social-login .guide-message a {
+  text-decoration: none;
+  color: var(--theme-color);
+}

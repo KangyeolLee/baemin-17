@@ -10,4 +10,8 @@ router.get("/agree", function (req, res, next) {
   res.render("agree");
 });
 
+router.get("/login", function (req, res, next) {
+  res.render("login");
+});
+
 module.exports = router;
