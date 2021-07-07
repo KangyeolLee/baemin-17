@@ -1,3 +1,7 @@
+:root {
+  --theme-color: #28c1bc;
+}
+
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #ededed;
@@ -9,14 +13,19 @@ body {
   align-items: center;
 }
 
-a {
-  color: #00b7ff;
-}
-
 #root {
   width: 400px;
   height: 800px;
   border: 1px solid #111;
   border-radius: 10px;
   background-color: #fff;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.divider {
+  border-bottom: 1px solid #ddd;
+  margin: 1rem 0;
 }
