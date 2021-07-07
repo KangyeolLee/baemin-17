@@ -16,6 +16,11 @@
   border: none;
   padding: 1rem 0;
   border-bottom: 1px solid #d7d7d7;
+  font-size: 1.05rem;
+}
+#login-field .input-wrapper input:focus {
+  border-bottom-color: #aaa;
+  outline: none;
 }
 #login-field .input-wrapper input::placeholder {
   color: #d7d7d7;

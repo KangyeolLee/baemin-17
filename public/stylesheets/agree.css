@@ -1,21 +1,3 @@
-#header {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  font-size: 1.17235rem;
-  font-weight: 700;
-}
-#header .close-btn {
-  position: absolute;
-  cursor: pointer;
-  width: 18px;
-  height: 18px;
-  left: 0;
-}
-#header .close-btn:hover {
-  opacity: 0.75;
-}
-
 .guide-message {
   margin: 2rem 0;
 }

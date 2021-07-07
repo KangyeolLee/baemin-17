@@ -29,3 +29,28 @@ body {
   border-bottom: 1px solid #ddd;
   margin: 1rem 0;
 }
+
+#header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-size: 1.17235rem;
+  font-weight: 700;
+  min-height: 18px;
+}
+#header .img-btn {
+  position: absolute;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  left: 0;
+}
+#header .img-btn:hover {
+  opacity: 0.75;
+}
+#header .complete-btn {
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  color: #d7d7d7;
+}
