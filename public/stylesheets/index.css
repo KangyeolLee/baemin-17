@@ -1,0 +1,173 @@
+/* reset.css 만들기 전 임시 { */
+
+#root {
+  position: relative;
+  overflow: hidden;
+}
+
+.main-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+
+  letter-spacing: -0.5px;
+}
+
+.main-page * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-page a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main-page ul, .main-page ol {
+  list-style: none;
+}
+
+/* } reset.css 만들기 전 임시 */
+
+.main-page img.arrow {
+  height: 15px;
+}
+
+.main-page h1.title {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.main-page .banner img {
+  width: 100%;
+}
+
+.main-page .user a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px;
+}
+
+.main-page .user {
+  font-size: 1.1rem;
+  color: #bcbcbc;
+}
+
+.main-page .user img.profile {
+  width: 38px;
+  height: 38px;
+  margin-right: 10px;
+}
+
+.main-page .user .left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main-page .menu-grid {
+  display: grid;
+  grid-template: ". . ." auto
+                  ". . ." auto / auto auto;
+}
+
+.main-page .menu-grid li {
+  border-top: 1px solid #f6f6f6;
+}
+
+.main-page .menu-grid li:not(:nth-child(3n+3)) {
+  border-right: 1px solid #f6f6f6;
+}
+
+.main-page .menu-grid a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 15px;
+  color: #888;
+}
+
+.main-page .menu-grid figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 32px;
+  margin-bottom: 4px;
+}
+
+.main-page .menu-grid img {
+  width: 32px;
+}
+
+.main-page .space-divider {
+  height: 10px;
+  background-color: #f6f6f6;
+}
+
+.main-page .recycle a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px;
+  color: #52b201;
+}
+
+.main-page .recycle .left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main-page .recycle .left img {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.main-page .menu-list li {
+  border-bottom: 1px solid #f6f6f6;
+}
+
+.main-page .menu-list a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 15px;
+}
+
+.main-page .menu-list .left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.main-page .menu-list .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #333;
+}
+
+.main-page .menu-list img.new {
+  height: 1.1em;
+  margin-left: 4px;
+}
+
+.main-page .menu-list p {
+  margin-top: 2spx;
+  color: #888;
+}
