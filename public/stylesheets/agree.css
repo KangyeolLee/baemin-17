@@ -8,6 +8,8 @@
 }
 #agreement-page .guide-message h2 {
   margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
 #agreement-page form {
@@ -123,7 +125,14 @@
 }
 #agreement-page .input-wrapper label.age-area .text-field .additional-message {
   color: #aaa;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: normal;
   margin-top: 0.35rem;
+}
+
+#agreement-page .input-wrapper label.age-area .input-image {
+  position: absolute;
+  right: 0;
+  width: auto;
+  height: 100%;
 }
