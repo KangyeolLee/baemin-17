@@ -13,7 +13,6 @@ function Agreement($agreement) {
   this.$nextBtn = $agreement.querySelector(".button");
 
   this.arrayRestAgreeInputs = Array.from(this.$restAgreeInputs);
-  this.arrayRulesAgreeInputs = Array.from(this.$rulesAgreeInputs);
   this.arrayMustSelectedInputs = Array.from(this.$mustSelectedInputs);
 
   // 가입약관 페이지 관련 초기화 메서드
@@ -38,12 +37,14 @@ function Agreement($agreement) {
 
   // 전체동의 버튼 활성화 여부 체크 메서드
   this.checkEveryRuleInput = function () {
-    const allChecked = this.arrayRulesAgreeInputs.every(
+    const allChecked = this.arrayRestAgreeInputs.every(
       (input) => input.checked === true
     );
 
     if (!allChecked) {
       this.$allAgreeInput.checked = false;
+    } else {
+      this.$allAgreeInput.checked = true;
     }
 
     this.activeNextBtn();
