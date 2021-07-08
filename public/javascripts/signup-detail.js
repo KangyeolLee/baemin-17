@@ -93,12 +93,14 @@ function SingupDetail($signupDetail) {
     if (!this.validateEmailForm(userEmail)) {
       this.inactivateCheckmark(EMAIL_AREA);
       flag && this.activateWarningMessage(EMAIL_AREA);
+      if (flag) this.$userEmail.style.borderBottomColor = "red";
       this.$userEmail.classList.remove("valid");
       return false;
     }
 
     this.activateCheckmark(EMAIL_AREA);
     this.inactivateWarningMessage(EMAIL_AREA);
+    this.$userEmail.style.borderBottomColor = "#d7d7d7";
     this.$userEmail.classList.add("valid");
     return true;
   };
@@ -110,12 +112,14 @@ function SingupDetail($signupDetail) {
     if (!userNickname) {
       this.inactivateCheckmark(NICKNAME_AREA);
       flag && this.activateWarningMessage(NICKNAME_AREA);
+      if (flag) this.$userNickname.style.borderBottomColor = "red";
       this.$userNickname.classList.remove("valid");
       return;
     }
 
     this.activateCheckmark(NICKNAME_AREA);
     this.inactivateWarningMessage(NICKNAME_AREA);
+    this.$userNickname.style.borderBottomColor = "#d7d7d7";
     this.$userNickname.classList.add("valid");
   };
 
@@ -126,12 +130,14 @@ function SingupDetail($signupDetail) {
     if (!this.validatePasswordForm(userPassword)) {
       this.inactivateCheckmark(PASSWORD_AREA);
       flag && this.activateWarningMessage(PASSWORD_AREA);
+      if (flag) this.$userPassword.style.borderBottomColor = "red";
       this.$userPassword.classList.remove("valid");
       return;
     }
 
     this.activateCheckmark(PASSWORD_AREA);
     this.inactivateWarningMessage(PASSWORD_AREA);
+    this.$userPassword.style.borderBottomColor = "#d7d7d7";
     this.$userPassword.classList.add("valid");
   };
 
@@ -142,12 +148,14 @@ function SingupDetail($signupDetail) {
     if (!this.validateBirthForm(userBirth)) {
       this.inactivateCheckmark(BIRTH_AREA);
       flag && this.activateWarningMessage(BIRTH_AREA);
+      if (flag) this.$userBirth.style.borderBottomColor = "red";
       this.$userBirth.classList.remove("valid");
       return;
     }
 
     this.activateCheckmark(BIRTH_AREA);
     this.inactivateWarningMessage(BIRTH_AREA);
+    this.$userBirth.style.borderBottomColor = "#d7d7d7";
     this.$userBirth.classList.add("valid");
   };
 
