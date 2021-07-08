@@ -1,16 +1,22 @@
-#login-field {
+#login-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#login-page .login-field {
   position: relative;
   flex: 1;
 }
 
-#login-field .input-wrapper {
+#login-page .login-field .input-wrapper {
   margin-top: 8rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-#login-field .input-wrapper input {
+#login-page .login-field .input-wrapper input {
   width: 100%;
   box-sizing: border-box;
   border: none;
@@ -18,40 +24,50 @@
   border-bottom: 1px solid #d7d7d7;
   font-size: 1.05rem;
 }
-#login-field .input-wrapper input:focus {
+#login-page .login-field .input-wrapper input:focus {
   border-bottom-color: #aaa;
   outline: none;
 }
-#login-field .input-wrapper input::placeholder {
+#login-page .login-field .input-wrapper input::placeholder {
   color: #d7d7d7;
   font-size: 1.05rem;
 }
 
-#login-field .button {
+#login-page .login-field .input-wrapper .warning-message {
+  position: absolute;
+  right: 0;
+  margin: 0;
+  margin-top: 0.2rem;
+  text-align: right;
+  color: red;
+  display: none;
+}
+
+#login-page .login-field .button {
   position: static;
   margin-top: 2rem;
 }
 
-#about-account {
+#login-page .about-account {
   margin-top: 1.5rem;
   display: flex;
   justify-content: space-evenly;
   color: #ededed;
 }
-#about-account a {
+#login-page .about-account a {
   color: #a7a7a7;
   text-decoration: none;
 }
-#about-account a:hover {
+#login-page .about-account a:hover {
   opacity: 0.75;
 }
 
-#social-login {
+#login-page .social-login {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-#social-login .social-login-btn {
+#login-page .social-login .social-login-btn {
   border: 1px solid #888;
   text-align: center;
   padding: 0.5rem;
@@ -62,20 +78,20 @@
   gap: 0.5rem;
   cursor: pointer;
 }
-#social-login .social-login-btn:hover {
+#login-page .social-login .social-login-btn:hover {
   background-color: #ededed;
 }
 
-#social-login .social-login-btn .logo-img {
+#login-page .social-login .social-login-btn .logo-img {
   width: 1rem;
   height: 1rem;
 }
 
-#social-login .guide-message {
+#login-page .social-login .guide-message {
   text-align: center;
   color: #999;
 }
-#social-login .guide-message a {
+#login-page .social-login .guide-message a {
   text-decoration: none;
   color: var(--theme-color);
 }

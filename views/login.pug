@@ -2,31 +2,39 @@ extends layout
 
 block content 
   header#header 
-    img.img-btn(src="images/cancel.svg", alt="close-button")
+    a(href="/") 
+      img.img-btn(src="images/cancel.svg", alt="close-button")
 
-  section#login-field 
-    form(action="/")
-      .input-wrapper
-        label.email-area #[input(type="email" placeholder="아이디 또는 이메일")]
-        label.password-area #[input(type="pasword" placeholder="비밀번호")] 
+  section#login-page
+    section.login-field
+      form(action="/")
+        .input-wrapper
+          label.email-area 
+            input.email-input(type="email" placeholder="아이디 또는 이메일")
+            p.warning-message 아이디를 입력하세요!
+          label.password-area 
+            input.password-input(type="pasword" placeholder="비밀번호")
+            p.warning-message 비밀번호를 입력하세요!
 
-      .button 로그인
+        .button.login-submit 로그인
 
-    #about-account   
-      a(href="/") 아이디 찾기
-      span |
-      a(href="/") 비밀번호 찾기  
+      .about-account   
+        a(href="#") 아이디 찾기
+        span |
+        a(href="#") 비밀번호 찾기  
 
-  seciton#social-login 
-    .social-login-btn#facebook-login 
-      img.logo-img(src="images/facebook.svg", alt="facebook-logo")
-      | 페이스북으로 로그인
-    .social-login-btn#naver-login 
-      img.logo-img(src="images/naver-logo.svg", alt="naver-logo")
-      | 네이버로 로그인
-    .social-login-btn#apple-login 
-      img.logo-img(src="images/apple-logo.svg", alt="apple-logo")
-      | Apple로 로그인
+    seciton.social-login 
+      .social-login-btn.facebook-login 
+        img.logo-img(src="images/facebook.svg", alt="facebook-logo")
+        | 페이스북으로 로그인
+      .social-login-btn.naver-login 
+        img.logo-img(src="images/naver-logo.svg", alt="naver-logo")
+        | 네이버로 로그인
+      .social-login-btn.apple-login 
+        img.logo-img(src="images/apple-logo.svg", alt="apple-logo")
+        | Apple로 로그인
 
-    .guide-message 혹시, 배달의 민족이 처음이신가요?
-      a(href="/")  회원가입 
+      .guide-message 혹시, 배달의 민족이 처음이신가요?
+        a(href="/signup/agree")  회원가입 
+  
+  script(defer src="/javascripts/login.js") 
