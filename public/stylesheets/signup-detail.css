@@ -1,41 +1,44 @@
-#user-details .input-wrapper {
+#signup-detail-page .input-wrapper {
   margin-top: 2rem;
   gap: 3rem;
 }
 
-#user-details .input-wrapper label {
+#signup-detail-page .input-wrapper label {
   position: relative;
   display: flex;
   flex-direction: column;
   color: #888;
   font-weight: 600;
 }
+#signup-detail-page .input-wrapper label:not(.email-area) {
+  display: none;
+}
 
-#user-details .input-wrapper label input {
+#signup-detail-page .input-wrapper label input {
   border: none;
   padding: 1rem 0;
   border-bottom: 1px solid #d7d7d7;
 }
 
-#user-details .input-wrapper label input:focus {
+#signup-detail-page .input-wrapper label input:focus {
   border-bottom-color: #aaa;
   outline: none;
 }
 
-#user-details .input-wrapper label input::placeholder {
+#signup-detail-page .input-wrapper label input::placeholder {
   color: #d7d7d7;
 }
 
-#user-details .email-check-wrapper {
+#signup-detail-page .email-check-wrapper {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   gap: 1rem;
 }
-#user-details .email-check-wrapper #user-email {
+#signup-detail-page .email-check-wrapper .user-email {
   flex: 1;
 }
-#user-details .email-check-wrapper .validate-btn {
+#signup-detail-page .email-check-wrapper .validate-btn {
   border: 1px solid #d7d7d7;
   padding: 0.5rem 1rem;
   font-weight: 500;
@@ -43,12 +46,12 @@
   color: #dadada;
   cursor: pointer;
 }
-#user-details .email-check-wrapper .validate-btn:hover {
+#signup-detail-page .email-check-wrapper .validate-btn:hover {
   border: 1px solid #888;
   color: #888;
 }
 
-#user-details .checkmark {
+#signup-detail-page .checkmark {
   position: absolute;
   display: block;
   border-left: 3px solid #d7d7d7;
@@ -59,10 +62,22 @@
   right: 1px;
   bottom: calc(1rem + 5px);
 }
-#user-details .checkmark.checked {
+#signup-detail-page .checkmark.checked {
   border-color: var(--theme-color);
 }
 
-#user-details .email-check-wrapper .checkmark {
+#signup-detail-page .email-check-wrapper .checkmark {
   right: calc(91px + 1rem);
+}
+
+#signup-detail-page .warning-message {
+  display: none;
+  margin: 0;
+  margin-top: 0.2rem;
+  color: red;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  font-size: 0.7rem;
+  font-weight: normal;
 }

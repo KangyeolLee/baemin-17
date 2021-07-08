@@ -55,6 +55,10 @@ body {
   color: #d7d7d7;
 }
 
+#header .complete-btn.active {
+  color: var(--theme-color);
+}
+
 .button {
   position: absolute;
   bottom: 0;
@@ -73,4 +77,5 @@ body {
 }
 .button.active:hover {
   opacity: 0.75;
+
 }
