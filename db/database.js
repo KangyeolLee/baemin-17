@@ -1,16 +1,26 @@
 const Datastore = require("nedb");
 const db = new Datastore({ filename: "./db/user.db", autoload: true });
 
-const insert = function (data) {
-  db.insert(data, function (err, newData) {
-    console.log("inserted : ", newData);
+const insert = async function (data) {
+  const result = await new Promise((resolve, reject) => {
+    db.insert(data, function (err, newData) {
+      if (err) reject(err);
+      resolve(newData);
+    });
   });
+
+  return result;
 };
 
-const find = function (query) {
-  db.find(query, function (err, target) {
-    console.log("found : ", target);
+const find = async function (query) {
+  const result = await new Promise((resolve, reject) => {
+    db.find(query, function (err, data) {
+      if (err) reject(err);
+      resolve(data);
+    });
   });
+
+  return result;
 };
 
 module.exports = {
