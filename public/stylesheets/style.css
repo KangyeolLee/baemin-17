@@ -54,3 +54,23 @@ body {
   right: 0;
   color: #d7d7d7;
 }
+
+.button {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #d7d7d7;
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+}
+.button.active {
+  cursor: pointer;
+  background-color: var(--theme-color);
+}
+.button.active:hover {
+  opacity: 0.75;
+}
