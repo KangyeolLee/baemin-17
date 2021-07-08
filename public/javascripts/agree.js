@@ -67,7 +67,7 @@ function Agreement($agreement) {
     const activated = this.$nextBtn.className.includes("active");
 
     if (activated) {
-      window.location.href = "/signup/detail";
+      window.location.href = "/signup/phone";
     }
   };
 }
