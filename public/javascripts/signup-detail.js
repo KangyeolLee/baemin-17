@@ -4,6 +4,7 @@ function SingupDetail($signupDetail) {
   const PASSWORD_AREA = ".password-area";
   const BIRTH_AREA = ".birth-area";
 
+  this.$form = $signupDetail.querySelector("form");
   this.$userEmail = $signupDetail.querySelector(".user-email");
   this.$userNickname = $signupDetail.querySelector(".user-nickname");
   this.$userPassword = $signupDetail.querySelector(".user-password");
@@ -37,6 +38,7 @@ function SingupDetail($signupDetail) {
     this.$completeBtn.addEventListener("click", () =>
       this.handleClickCompleteBtn()
     );
+    this.activateServerErrorMessage();
   };
 
   // 완료 버튼 클릭 이벤트 콜백
@@ -45,11 +47,7 @@ function SingupDetail($signupDetail) {
       return;
     }
 
-    // 회원가입 API 처리
-
-    // 회원가입 전송 요청 서버로 성공적으로 전송 후 페이지 이동 (임시로 setTimeout 사용)
-
-    setTimeout(() => (window.location.href = "/login"), 3000);
+    this.$form.submit();
   };
 
   // 모든 입력값 재검증 후 결과에 따라 완료 버튼 활성화 메서드
@@ -92,6 +90,7 @@ function SingupDetail($signupDetail) {
 
     if (!this.validateEmailForm(userEmail)) {
       this.inactivateCheckmark(EMAIL_AREA);
+      this.inactivateServerErrorMessage();
       flag && this.activateWarningMessage(EMAIL_AREA);
       if (flag) this.$userEmail.style.borderBottomColor = "red";
       this.$userEmail.classList.remove("valid");
@@ -100,6 +99,7 @@ function SingupDetail($signupDetail) {
 
     this.activateCheckmark(EMAIL_AREA);
     this.inactivateWarningMessage(EMAIL_AREA);
+    this.inactivateServerErrorMessage();
     this.$userEmail.style.borderBottomColor = "#d7d7d7";
     this.$userEmail.classList.add("valid");
     return true;
@@ -290,6 +290,40 @@ function SingupDetail($signupDetail) {
     const warningMessage = $signupDetail.querySelector(warningMessageSelector);
 
     warningMessage.style.display = "none";
+  };
+
+  // 서버로부터 수신된 에러메시지 활성화 메서드
+  this.activateServerErrorMessage = function () {
+    const serverErrorMessage = $signupDetail.querySelector(
+      ".server-error-message"
+    );
+
+    if (!serverErrorMessage?.textContent) {
+      return;
+    }
+
+    this.inactivateWarningMessage(EMAIL_AREA);
+    serverErrorMessage.style.display = "block";
+  };
+
+  // 서버로부터 수신된 에러메시지 비활성화 메서드
+  this.inactivateServerErrorMessage = function () {
+    const serverErrorMessage = $signupDetail.querySelector(
+      ".server-error-message"
+    );
+
+    if (!serverErrorMessage?.textContent) {
+      return;
+    }
+
+    const selector = EMAIL_AREA + " " + ".warning-message";
+    const emailWarningMessage = $signupDetail.querySelector(selector);
+
+    if (!emailWarningMessage?.textContent) {
+      return;
+    }
+
+    serverErrorMessage.style.display = "none";
   };
 
   // 나머지 인풋 요소 출력 메서드
