@@ -1,8 +1,6 @@
-/* reset.css 만들기 전 임시 { */
-
 #root {
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 #signup-phone-page {
@@ -17,18 +15,9 @@
   letter-spacing: -0.5px;
 }
 
-#signup-phone-page * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+#signup-phone-page button {
+  cursor: pointer;
 }
-
-#signup-phone-page a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* } reset.css 만들기 전 임시 */
 
 #signup-phone-page .header {
   display: flex;
@@ -42,7 +31,6 @@
   border: none;
   background: none;
   outline: none;
-  cursor: pointer;
 }
 
 #signup-phone-page .header .back img {
@@ -56,8 +44,6 @@
 
 #signup-phone-page .header .next {
   font-weight: bold;
-  color: #bbb;
-  cursor: auto;
 }
 
 #signup-phone-page .content {
@@ -65,8 +51,14 @@
   flex-direction: column;
 }
 
-#signup-phone-page .content > * {
+#signup-phone-page .content > *,
+#signup-phone-page form.phone > * {
   margin-top: 32px;
+}
+
+#signup-phone-page form.phone {
+  display: flex;
+  flex-direction: column;
 }
 
 #signup-phone-page .send-number {
@@ -75,7 +67,6 @@
   border: 1px solid #eee;
   background: none;
   outline: none;
-  cursor: pointer;
   border-radius: 4px;
 }
 
@@ -84,52 +75,109 @@
   flex-direction: column;
 }
 
+#signup-phone-page .input-field .title {
+  color: #888;
+  transition: color 300ms ease;
+}
+
+#signup-phone-page .input-field.focus .title {
+  color: #333;
+  size: 1.1rem;
+}
+
 #signup-phone-page .input-field .field {
   position: relative;
 }
 
-#signup-phone-page .input-field .field input {
+#signup-phone-page .input-field input {
   width: 100%;
   padding: 10px 0;
   border: none;
   border-bottom: 1px solid #888;
   background: none;
   outline: none;
+
+  transition: border-bottom-color 300ms ease;
 }
 
-#signup-phone-page .input-field .calcel {
+#signup-phone-page .input-field.focus input {
+  border-bottom-color: #333;
+}
+
+#signup-phone-page .input-field .cancel {
   position: absolute;
-  right: 32px;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
   width: 16px;
   height: 16px;
-  padding: 4px;
+
+  margin-right: 10px;
+  padding: 0;
 
   border: none;
-  border-radius: 50%;
 
+  background: none;
   outline: none;
-  background-color: #888;
-  cursor: pointer;
 }
 
-#signup-phone-page .input-field .calcel::before {
+#signup-phone-page .input-field .cancel {
   position: absolute;
-  top: 0;
-  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  width: 16px;
+  height: 16px;
+
+  margin-right: 10px;
+
+  border: none;
+
+  background: none;
+  outline: none;
+}
+
+#signup-phone-page .input-field.focus .cancel {
   display: block;
+}
+
+#signup-phone-page .input-field .cancel img {
   width: 100%;
   height: 100%;
-  content: 'X';
-  color: #fff;
-  text-align: center;
-  line-height: 16px;
-  font-size: 10px;
+}
+
+#signup-phone-page .input-field .invalid-text {
+  height: 0;
+  overflow: hidden;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: rgb(250, 62, 62);
+
+  transition: height 200ms ease;
+}
+
+#signup-phone-page .input-field.invalid  .invalid-text {
+  height: auto;
+}
+
+#signup-phone-page .input-field:not(.focus).valid .field::after {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+
+  background-image: url(/images/validation-green.png);
+  background-size: 100% 100%;
 }
 
 #signup-phone-page .certification-number {
-  display: flex;
+  display: none;
+  /* display: flex; */
   flex-direction: column;
 }
 
@@ -140,6 +188,5 @@
   border: none;
   background: none;
   outline: none;
-  cursor: pointer;
   color: #63bfc1;
 }

@@ -1,25 +1,28 @@
 extends layout
 
+block head
+  link(rel='stylesheet', href='/stylesheets/signup-phone.css')
+  script(defer, src='/javascripts/signup-phone.js')
+
 block content
   #signup-phone-page
     .header
       button.back(type='button'): img(src='/images/arrow-left.svg', alt='뒤로가기')
       h1 회원가입
-      button.next(type='button') 다음
+      button.next(type='button', disabled) 다음
     .content
-      label.input-field.cancelable
-        .title 휴대전화
-        .field
-          input(type='text', name='login', placeholder='전화번호를 입력해주세요')
-          button.calcel(type='button')
-      button.send-number 인증번호 받기
+      form.phone
+        label.input-field.cancelable(data-name='phone')
+          .title 휴대전화
+          .field
+            input(type='text', name='login', placeholder='전화번호를 입력해주세요', maxlength='13')
+            button.cancel(type='button'): img(src="/images/cancel-circle.png", alt="리셋")
+          .invalid-text 전화번호 양식에 맞춰 입력해 주세요.
+        button.send-number(type='submit') 인증번호 받기
       div.certification-number
-        label.input-field.cancelable
+        label.input-field.cancelable(data-name='certification')
           .title 인증번호
           .field
-            input(type='text', name='login', placeholder='전화번호를 입력해주세요')
-            button.calcel(type='button')
+            input(type='text', name='login', placeholder='인증번호를 입력해주세요', maxlength='4')
+            button.cancel(type='button'): img(src="/images/cancel-circle.png", alt="리셋")
         button.resend-number 인증번호 다시받기
-          
-
-    
