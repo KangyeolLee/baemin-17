@@ -1,0 +1,145 @@
+/* reset.css 만들기 전 임시 { */
+
+#root {
+  position: relative;
+  overflow: hidden;
+}
+
+#signup-phone-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+
+  letter-spacing: -0.5px;
+}
+
+#signup-phone-page * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#signup-phone-page a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* } reset.css 만들기 전 임시 */
+
+#signup-phone-page .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#signup-phone-page .header button {
+  padding: 8px;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#signup-phone-page .header .back img {
+  width: 12px;
+  height: 12px;
+}
+
+#signup-phone-page .header h1 {
+  font-size: 1rem;
+}
+
+#signup-phone-page .header .next {
+  font-weight: bold;
+  color: #bbb;
+  cursor: auto;
+}
+
+#signup-phone-page .content {
+  display: flex;
+  flex-direction: column;
+}
+
+#signup-phone-page .content > * {
+  margin-top: 32px;
+}
+
+#signup-phone-page .send-number {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #eee;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#signup-phone-page .input-field {
+  display: flex;
+  flex-direction: column;
+}
+
+#signup-phone-page .input-field .field {
+  position: relative;
+}
+
+#signup-phone-page .input-field .field input {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid #888;
+  background: none;
+  outline: none;
+}
+
+#signup-phone-page .input-field .calcel {
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  padding: 4px;
+
+  border: none;
+  border-radius: 50%;
+
+  outline: none;
+  background-color: #888;
+  cursor: pointer;
+}
+
+#signup-phone-page .input-field .calcel::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: 'X';
+  color: #fff;
+  text-align: center;
+  line-height: 16px;
+  font-size: 10px;
+}
+
+#signup-phone-page .certification-number {
+  display: flex;
+  flex-direction: column;
+}
+
+#signup-phone-page .resend-number {
+  align-self: flex-end;
+  margin-top: 32px;
+
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  color: #63bfc1;
+}

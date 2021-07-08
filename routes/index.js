@@ -14,6 +14,10 @@ router.get("/login", function (req, res, next) {
   res.render("login");
 });
 
+router.get('/signup/phone', function (req, res, next) {
+  res.render('signup-phone', { title: '배민 - 전화번호 인증'})
+});
+
 router.get("/signup/detail", function (req, res, next) {
   res.render("signup-detail");
 });
