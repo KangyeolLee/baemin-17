@@ -45,20 +45,24 @@ function Login($login) {
   this.toggleEmailWarningMessage = function (userEmail) {
     if (!userEmail) {
       this.$emailWarningMsg.style.display = "block";
+      this.$emailInput.style.borderBottomColor = "red";
       return false;
     }
 
     this.$emailWarningMsg.style.display = "none";
+    this.$emailInput.style.borderBottomColor = "#d7d7d7";
     return true;
   };
 
   this.togglePasswordWarningMessage = function (userPassword) {
     if (!userPassword) {
       this.$passwordWarningMsg.style.display = "block";
+      this.$passwordInput.style.borderBottomColor = "red";
       return false;
     }
 
     this.$passwordWarningMsg.style.display = "none";
+    this.$passwordInput.style.borderBottomColor = "#d7d7d7";
     return true;
   };
 }
