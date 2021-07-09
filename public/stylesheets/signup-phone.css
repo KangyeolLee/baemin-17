@@ -20,30 +20,43 @@
 }
 
 #signup-phone-page .header {
+  position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  box-sizing: content-box;
 }
 
 #signup-phone-page .header button {
-  padding: 8px;
+  position: absolute;
+  padding: 0;
   border: none;
   background: none;
   outline: none;
 }
 
+#signup-phone-page .header button.back {
+  left: 0;
+}
+#signup-phone-page .header button.next {
+  right: 0;
+}
+
 #signup-phone-page .header .back img {
-  width: 12px;
-  height: 12px;
+  width: 18px;
+  height: 18px;
 }
 
 #signup-phone-page .header h1 {
-  font-size: 1rem;
+  font-size: 1.17235rem;
+  font-weight: 700;
 }
 
 #signup-phone-page .header .next {
   font-weight: bold;
+  font-size: 1.17235rem;
+  font-weight: 700;
 }
 
 #signup-phone-page .content {
@@ -157,7 +170,7 @@
   transition: height 200ms ease;
 }
 
-#signup-phone-page .input-field.invalid  .invalid-text {
+#signup-phone-page .input-field.invalid .invalid-text {
   height: auto;
 }
 
@@ -166,7 +179,7 @@
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
-  content: '';
+  content: "";
   display: block;
   width: 16px;
   height: 16px;
