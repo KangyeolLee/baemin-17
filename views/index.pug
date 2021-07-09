@@ -7,11 +7,19 @@ block content
       a(href="#")
         img(src='/images/banner.png' alt='배너')
     .user
-      a(href="/login") 
-        .left
-          img.profile(src="/images/profile.png", alt="프로필")
-          span 로그인해주세요
-        img.right.arrow(src="/images/arrow.png", alt="화살표")
+      if nickname
+        .logged-in
+          .left
+            img.profile(src="/images/profile.png", alt="프로필")
+            span 안녕하세요 #{nickname}님!
+          .right
+            a.logout(href="/logout") 로그아웃
+      else
+        a(href="/login") 
+          .left
+            img.profile(src="/images/profile.png", alt="프로필")
+            span 로그인해주세요
+          img.right.arrow(src="/images/arrow.png", alt="화살표")
     ul.menu-grid
       li
         a(href='#')

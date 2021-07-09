@@ -43,6 +43,11 @@
   display: none;
 }
 
+#login-page .login-error-message {
+  margin-top: 1rem;
+  color: red;
+}
+
 #login-page .login-field .button {
   position: static;
   margin-top: 2rem;

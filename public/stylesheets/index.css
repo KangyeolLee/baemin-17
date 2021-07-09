@@ -49,18 +49,18 @@
   width: 100%;
 }
 
-.main-page .user a {
+.main-page .user {
+  font-size: 1.1rem;
+  color: #bcbcbc;
+}
+
+.main-page .user > a, .main-page .user .logged-in {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
   padding: 15px;
-}
-
-.main-page .user {
-  font-size: 1.1rem;
-  color: #bcbcbc;
 }
 
 .main-page .user img.profile {
@@ -73,6 +73,11 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.main-page .user .logged-in .logout {
+  color: #333;
+  font-size: 1rem;
 }
 
 .main-page .menu-grid {

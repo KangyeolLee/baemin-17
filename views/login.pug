@@ -7,15 +7,16 @@ block content
 
   section#login-page
     section.login-field
-      form(action="/")
+      form.login-form(action="/login", method="POST")
         .input-wrapper
           label.email-area 
-            input.email-input(type="email" placeholder="아이디 또는 이메일")
+            input.email-input(type="email", name="email", placeholder="아이디 또는 이메일")
             p.warning-message 아이디를 입력하세요!
           label.password-area 
-            input.password-input(type="pasword" placeholder="비밀번호")
+            input.password-input(type="password", name="password" placeholder="비밀번호")
             p.warning-message 비밀번호를 입력하세요!
-
+        if error
+          p.login-error-message 로그인 오류: #{error}
         .button.login-submit.active 로그인
 
       .about-account   
