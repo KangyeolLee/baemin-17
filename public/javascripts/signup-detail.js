@@ -11,6 +11,7 @@ function SingupDetail($signupDetail) {
   this.$userBirth = $signupDetail.querySelector(".user-birth");
   this.$checkDuplicationBtn = $signupDetail.querySelector(".validate-btn");
   this.$completeBtn = document.querySelector(".complete-btn");
+  this.$imgBtn = document.querySelector("#header .img-btn");
   this.$allInputs = $signupDetail.querySelectorAll("input");
 
   this.arrayAllInputs = Array.from(this.$allInputs);
@@ -38,6 +39,7 @@ function SingupDetail($signupDetail) {
     this.$completeBtn.addEventListener("click", () =>
       this.handleClickCompleteBtn()
     );
+    this.$imgBtn.addEventListener("click", () => history.back());
     this.activateServerErrorMessage();
   };
 
